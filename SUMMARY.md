@@ -4,8 +4,6 @@
 * [部署](bu-shu.md)
   * [kubespray](bu-shu/kubespray.md)
     * [定制源码](bu-shu/kubespray/ding-zhi-yuan-ma.md)
-    * 环境准备
-  * kubeadm
-
-
+    * [环境准备](bu-shu/kubespray/huan-jing-zhun-bei.md)
+  * [kubeadm](bu-shu/kubeadm.md)
 
