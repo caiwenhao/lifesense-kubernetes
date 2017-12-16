@@ -5,12 +5,10 @@
 > 1. 默认的镜像源是海外服务器,下载慢而且可能是被墙. 
 > 2. docker参数的优化
 > 3. 以及需要修改环境参数
-
+>
 > 官方给出的最佳实践
 >
-> https://github.com/caiwenhao/kubespray/blob/master/docs/integration.md
-
-
+> [https://github.com/caiwenhao/kubespray/blob/master/docs/integration.md](https://github.com/caiwenhao/kubespray/blob/master/docs/integration.md)
 
 ## 具体实践
 
@@ -28,8 +26,6 @@
    ```
    暂时留
    ```
-
-
 
 
 
