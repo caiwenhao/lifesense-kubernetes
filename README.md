@@ -1,14 +1,6 @@
-# My Awesome Book
+# kubernetes
 
-This file file serves as your book's preface, a great place to describe your book's content and ideas.
-
-hello
-
-\#\#
-
-```
-
-```
+> 本文档记录kubernetes完整生态圈的构建
 
 
 
