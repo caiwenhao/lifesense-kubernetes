@@ -1,4 +1,4 @@
-# 部署环境支持
+# 环境准备
 
 ### 服务器准备
 
@@ -10,6 +10,7 @@
 > 对所有服务器进行内核升级
 
 ```bash
+curl 10.10.119.24/ansible/4.9.0-1.el7.ucloud.x86_64.tar.gz
 tar xf 4.9.0-1.el7.ucloud.x86_64.tar.gz 
 cd kernel-4.9.0-1.el7.ucloud/
 ./install.sh 
