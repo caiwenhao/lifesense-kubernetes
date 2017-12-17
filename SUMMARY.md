@@ -13,7 +13,6 @@
   * helm
 * 镜像仓库
   * 添加第三方仓库
-* * Harbor
 * 分布式存储
   * ceph
   * root
@@ -21,9 +20,5 @@
   * heapster
   * Prometheus
 * 集群日志
-  * elk
-
-
-
-
+  * [elk](elk.md)
 
