@@ -5,6 +5,19 @@
 > 1. 三台master组成高可用
 > 2. centos 7.2 + 4.9.0-1.el7.ucloud.x86\_6内核
 
+### 环境初始化
+
+```
+[k8s_19]
+10.9.94.239 PS1=lx-k8s-master NUM=A
+10.9.173.124 PS1=lx-k8s-master NUM=B
+10.9.112.195 PS1=lx-k8s-master NUM=C
+```
+
+```
+
+```
+
 ### 内核升级
 
 > 对所有服务器进行内核升级
@@ -24,12 +37,6 @@ reboot
 
 ```
 /dev/vda1       /       xfs     defaults        0 0
-```
-
-### 环境初始化
-
-```
-
 ```
 
 ### anisble部署支持
