@@ -8,10 +8,13 @@
     * [源码定制](bu-shu/kubespray/yuan-ma-ding-zhi.md)
     * [部署过程](bu-shu/kubespray/bu-shu-guo-cheng.md)
   * [kubeadm](bu-shu/kubeadm.md)
-* [组件](ji-qun-guan-li.md)
+* [核心组件](ji-qun-guan-li.md)
   * [helm](helm.md)
   * ingress
-* 集群运维
+  * dashboard
+  * efk
+  * istio
+* [集群运维](ji-qun-yun-wei.md)
   * [kubectl](kubectl.md)
 * [镜像仓库](jing-xiang-cang-ku.md)
   * 添加第三方仓库
