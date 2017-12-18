@@ -52,6 +52,8 @@ pip install ansible
 
 ```bash
 wget https://pypi.python.org/packages/90/61/f820ff0076a2599dd39406dcb858ecb239438c02ce706c8e91131ab9c7f1/Jinja2-2.9.6.tar.gz#md5=6411537324b4dba0956aaa8109f3c77b
+tar xf Jinja2-2.9.6.tar.gz 
+cd Jinja2-2.9.6
 python setup.py install
 ```
 
