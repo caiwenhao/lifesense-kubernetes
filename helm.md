@@ -2,6 +2,12 @@
 
 ## 部署
 
+`inventory\group_vars\k8s-cluster.yml`
+
+```
+dashboard_enabled: true
+```
+
 ```
 
 ```
