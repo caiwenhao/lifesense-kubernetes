@@ -11,7 +11,7 @@ ansible-playbook -i inventory/inventory.cfg cluster.yml -vs -u lifesense --list-
 ### 镜像下载
 
 ```
-
+ ansible-playbook -i inventory/inventory.cfg cluster.yml -vs -u lifesense -t facts,download -k
 ```
 
 

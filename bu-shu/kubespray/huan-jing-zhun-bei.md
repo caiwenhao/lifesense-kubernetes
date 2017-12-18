@@ -45,7 +45,7 @@ reboot
 ### anisble部署支持
 
 ```bash
-yum install python-setuptools python-netaddr git -y
+yum install python-setuptools python-netaddr sshpass git -y
 easy_install pip
 pip install ansible
 ```
