@@ -13,9 +13,15 @@
 ## 具体实践
 
 1. github上fork 一份到自己仓库 , 官方 `https://github.com/kubernetes-incubator/kubespray.git`
-2. 创建lifesense分支,在分支上做变更
-3. 不定期铜鼓不官方源
+2. 创建分支,在分支上做变
    ```
+   git clone https://github.com/caiwenhao/kubespray.git
+   git checkout -b lifesense origin/lifesense
+   ```
+3. 不定期同步官方源
+   ```
+   git clone https://github.com/caiwenhao/kubespray.git
+   git checkout -b lifesense origin/lifesense
    git remote add upstream https://github.com/kubernetes-incubator/kubespray.git
    git checkout master
    git fetch upstream
@@ -27,7 +33,7 @@
    等待更新
    ```
 
-> 这里推荐使用vs code 编程神器  https://code.visualstudio.com/
+> 这里推荐使用vs code 编程神器  [https://code.visualstudio.com/](https://code.visualstudio.com/)
 
 
 

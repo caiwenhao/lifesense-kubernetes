@@ -45,11 +45,9 @@ reboot
 ### anisble部署支持
 
 ```bash
+yum install python-setuptools python-netaddr git -y
 easy_install pip
-yum install python-netaddr git
-pip ansible
-git clone https://github.com/caiwenhao/kubespray.git
-git checkout -b lifesense origin/lifesense
+pip install ansible
 ```
 
 ```bash
