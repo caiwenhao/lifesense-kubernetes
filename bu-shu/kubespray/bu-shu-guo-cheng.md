@@ -35,5 +35,11 @@ docker push reg.lifesense.com/coreos/hyperkube:v1.8.4_coreos.0
 
 > 其他惊险的缺失也如此操作
 
+### 集群部署
+
+```
+ansible-playbook -i inventory/inventory.cfg cluster.yml -vs -u lifesense -k
+```
+
 
 
