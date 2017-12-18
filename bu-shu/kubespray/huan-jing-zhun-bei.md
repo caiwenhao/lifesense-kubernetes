@@ -16,12 +16,12 @@
 
 ```bash
 #初始化环境
-ansible-playbook -i Inventory/k8s Initialize.yml -vs -l k8s_19 -u root -k 
+ansible-playbook -i Inventory/k8s Initialize.yml -vs -l k8s_19 -u root -k
 ```
 
 ### 内核升级
 
-> 对所有服务器进行内核升级
+> 对所有服务器进行内核升级, 此内核只适合`ucloud` 公有云
 
 ```bash
 cd /data
