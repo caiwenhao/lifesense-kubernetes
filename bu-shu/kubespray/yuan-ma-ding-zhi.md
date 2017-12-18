@@ -119,13 +119,7 @@ etcd_data_dir: /data/etcd
 kubelet_fail_swap_on: false
 ```
 
-### 9.helm
-
-```
-helm_enabled: true
-```
-
-### 10.替换仓库源
+### 9.替换仓库源
 
 `roles\download\defaults\main.yml`
 
