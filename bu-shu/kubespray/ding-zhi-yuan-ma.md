@@ -16,21 +16,23 @@
 2. 创建分支,在分支上做变
    ```
    git clone https://github.com/caiwenhao/kubespray.git
-   git checkout -b lifesense origin/lifesense
+   git checkout -b lifesense-1.9
    ```
 3. 不定期同步官方源
    ```
-   git clone https://github.com/caiwenhao/kubespray.git
-   git checkout -b lifesense origin/lifesense
    git remote add upstream https://github.com/kubernetes-incubator/kubespray.git
    git checkout master
    git fetch upstream
+   git config --global user.email "caiwenhao186@live.com"
+   git config --global user.name "caiwenhao"
    git merge upstream/master
    git push origin master
    ```
-4. 根据版本需要合并到lifesense分支解决冲突
+4. 根据版本需要合并到lifesense-1.9分支
    ```
-   等待更新
+   git checkout lifesense-1.9
+   git merge master
+   git push
    ```
 
 > 这里推荐使用vs code 编程神器  [https://code.visualstudio.com/](https://code.visualstudio.com/)
