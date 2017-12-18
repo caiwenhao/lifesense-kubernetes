@@ -5,10 +5,10 @@
 `ansible.cfg`
 
 ```
-remote_port = 16822
+remote_port = 22
 ```
 
-> 我们服务器ssh默认端口为16822
+> 我们服务器ssh默认端口为22
 
 ### 2.修改主机清单
 
