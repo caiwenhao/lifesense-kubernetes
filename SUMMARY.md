@@ -12,7 +12,6 @@
   * [helm](helm.md)
   * ingress
 * 集群运维
-  * 常用命令
   * [kubectl](kubectl.md)
 * [镜像仓库](jing-xiang-cang-ku.md)
   * 添加第三方仓库
