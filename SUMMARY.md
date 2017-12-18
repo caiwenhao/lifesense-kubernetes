@@ -6,7 +6,7 @@
     * [环境准备](bu-shu/kubespray/huan-jing-zhun-bei.md)
     * [源码管理](bu-shu/kubespray/ding-zhi-yuan-ma.md)
     * [源码定制](bu-shu/kubespray/yuan-ma-ding-zhi.md)
-    * 部署过程
+    * [部署过程](bu-shu/kubespray/bu-shu-guo-cheng.md)
   * [kubeadm](bu-shu/kubeadm.md)
 * 集群管理
   * kubectl
