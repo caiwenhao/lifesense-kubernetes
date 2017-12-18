@@ -8,10 +8,13 @@
     * [源码定制](bu-shu/kubespray/yuan-ma-ding-zhi.md)
     * [部署过程](bu-shu/kubespray/bu-shu-guo-cheng.md)
   * [kubeadm](bu-shu/kubeadm.md)
-* 集群管理
+* 核心[组件](ji-qun-guan-li.md)
   * [kubectl](kubectl.md)
-  * helm
-* 镜像仓库
+  * [helm](helm.md)
+  * ingress
+* 集群运维
+  * 常用命令
+* [镜像仓库](jing-xiang-cang-ku.md)
   * 添加第三方仓库
 * 分布式存储
   * ceph
@@ -21,4 +24,6 @@
   * Prometheus
 * 集群日志
   * [elk](elk.md)
+
+
 

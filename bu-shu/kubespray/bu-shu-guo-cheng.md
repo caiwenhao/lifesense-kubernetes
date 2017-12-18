@@ -41,11 +41,5 @@ docker push reg.lifesense.com/coreos/hyperkube:v1.8.4_coreos.0
 ansible-playbook -i inventory/inventory.cfg cluster.yml -vs -u lifesense -k
 ```
 
-```
-/usr/local/bin/helm init --upgrade --tiller-image=reg.lifesense.com/kubernetes-helm/tiller:v2.7.2 --tiller-namespace=kube-system --service-account=tiller
-```
-
-> helm初始化出现错误, 需要多次执行
-
 
 
