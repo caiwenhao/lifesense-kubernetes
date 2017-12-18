@@ -59,9 +59,9 @@ docker_options: "--registry-mirror=http://b377ad59.m.daocloud.io --insecure-regi
 ```
 
 > 1. 修改docker存储路径
-> 2. 启动镜像国内加速  --registry-mirror=http://b377ad59.m.daocloud.io
+> 2. 启动镜像国内加速  --registry-mirror=[http://b377ad59.m.daocloud.io](http://b377ad59.m.daocloud.io)
 
-### 修改kube全局参数
+### 4.修改kube全局参数
 
 `inventory\group_vars\k8s-cluster.yml`
 
@@ -83,31 +83,45 @@ helm_enabled: true
 > 6. 控制台插件
 > 7. helm插件
 
-### 替换仓库源
+### 5.DNS服务器
+
+`inventory\group_vars\all.yml`
 
 ```
-quay.io reg.lifesense.com
-library/nginx reg.lifesense.com/library/nginx
-gcr.io reg.lifesense.com
-busybox reg.lifesense.com/library/busybox
-nginx_image_repo: nginx
-nginx_image_repo: reg.lifesense.com/library/nginx
+upstream_dns_servers:
+  - 10.9.255.1
+  - 10.9.255.2
+  - 114.114.114.114
 ```
 
+> 前面两个为ucloud内网dns服务器
 
+### 6.全局参数
 
-inventory/group\_vars/k8s-cluster.yml
+`inventory\group_vars\all.yml`
 
-### 解决小内存部署问题
+```
+bootstrap_os: centos
+kubelet_load_modules: true
+```
+
+### 7.修改etcd路径
+
+`inventory\group_vars\all.yml`
+
+```
+etcd_data_dir: /data/etcd
+```
+
+### 8.解决小内存部署问题
 
 ```
 kubelet_fail_swap_on: false
 ```
 
-### helm
+### 9.helm
 
 ```
-helm_version: "v2.6.2"
 helm_enabled: true
 ```
 
@@ -116,35 +130,40 @@ wget https://kubernetes-helm.storage.googleapis.com/helm-v2.6.2-linux-amd64.tar.
 mv helm /usr/local/bin/helm
 ```
 
+### 10.替换仓库源
+
+`roles\download\defaults\main.yml`
+
+```
+quay.io reg.lifesense.com
+
+```
+
+```
+quay.io reg.lifesense.com
+gcr.io reg.lifesense.com
+
+
+library/nginx reg.lifesense.com/library/nginx
+
+busybox reg.lifesense.com/library/busybox
+nginx_image_repo: nginx
+nginx_image_repo: reg.lifesense.com/library/nginx
+```
+
+```
+
+```
 
 
 
 
-4.
-
-inventory/group\_vars/all.yml
-
-\`\`\`
-
-bootstrap\_os: centos
-
-etcd\_data\_dir: /data/etcd
-
-kubelet\_load\_modules: true
-
-upstream\_dns\_servers:
-
-* 114.114.114.114
-
-kube\_network\_prefix: 18
 
 
 
-\`\`\`
 
 
 
-\#\# app部署
 
 charts源
 
@@ -155,14 +174,6 @@ helm repo add incubator [https://kubernetes-charts-incubator.storage.googleapis.
 helm repo add lifesense [https://caiwenhao.github.io/charts/](https://caiwenhao.github.io/charts/)
 
 helm repo update
-
-\`\`\`
-
-部署heapster
-
-\`\`\`
-
-helm install stable/heapster --namespace=kube-system -f heapster.yml
 
 \`\`\`
 
