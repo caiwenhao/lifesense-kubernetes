@@ -23,7 +23,7 @@ fatal: [master3]: FAILED! => {"attempts": 4, "changed": false, "cmd": "/usr/bin/
 ```
 
 ```
-
+/usr/bin/docker pull quay.io/coreos/hyperkube:v1.8.4_coreos.0
 ```
 
 
