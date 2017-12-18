@@ -9,7 +9,7 @@
     * [部署过程](bu-shu/kubespray/bu-shu-guo-cheng.md)
   * [kubeadm](bu-shu/kubeadm.md)
 * 集群管理
-  * kubectl
+  * [kubectl](kubectl.md)
   * helm
 * 镜像仓库
   * 添加第三方仓库
