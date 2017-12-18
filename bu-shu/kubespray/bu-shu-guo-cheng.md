@@ -13,17 +13,21 @@ ansible-playbook -i inventory/inventory.cfg cluster.yml -vs -u lifesense --list-
 > 默认镜像为国外镜像源,为适应生产环境环境我们搭建了一个香港的镜像的仓库`reg.lifesense.com`
 
 ```bash
- ansible-playbook -i inventory/inventory.cfg cluster.yml -vs -u lifesense -t facts,download -k
+ ansible-playbook -i inventory/inventory.cfg cluster.yml -vs -u lifesense -t facts,docker,download -k
 ```
 
 > 如果发现镜像缺失,需要通过香港的镜像服务器拉取
 
 ```
-fatal: [master3]: FAILED! => {"attempts": 4, "changed": false, "cmd": "/usr/bin/docker pull reg.lifesense.com/coreos/hyperkube:v1.8.4_coreos.0", "msg": "[Errno 2] No such file or directory", "rc": 2}
+fatal: [master1]: FAILED! => {"attempts": 4, "changed": true, "cmd": ["/usr/bin/docker", "pull", "reg.lifesense.com/library/nginx:1.13"], "delta": "0:00:02.449327", "end": "2017-12-18 20:38:25.971066", "msg": "non-zero return code", "rc": 1, "start": "2017-12-18 20:38:23.521739", "stderr": "Error: image library/nginx:1.13 not found", "stderr_lines": ["Error: image library/nginx:1.13 not found"], "stdout": "Pulling repository reg.lifesense.com/library/nginx", "stdout_lines": ["Pulling repository reg.lifesense.com/library/nginx"]}
 ```
 
 ```bash
 #登陆香港镜像仓库服务器
+docker pull library/nginx:1.13  
+docker tag library/nginx:1.13 reg.lifesense.com/library/nginx:1.13
+docker push reg.lifesense.com/library/nginx:1.13
+
 /usr/bin/docker pull quay.io/coreos/hyperkube:v1.8.4_coreos.0
 docker tag quay.io/coreos/hyperkube:v1.8.4_coreos.0 reg.lifesense.com/coreos/hyperkube:v1.8.4_coreos.0
 docker push reg.lifesense.com/coreos/hyperkube:v1.8.4_coreos.0
