@@ -125,55 +125,55 @@ kubelet_fail_swap_on: false
 helm_enabled: true
 ```
 
-```
-wget https://kubernetes-helm.storage.googleapis.com/helm-v2.6.2-linux-amd64.tar.gz
-mv helm /usr/local/bin/helm
-```
-
 ### 10.替换仓库源
 
 `roles\download\defaults\main.yml`
 
 ```
 quay.io reg.lifesense.com
-
-```
-
-```
-quay.io reg.lifesense.com
 gcr.io reg.lifesense.com
+```
 
-
-library/nginx reg.lifesense.com/library/nginx
-
-busybox reg.lifesense.com/library/busybox
+```
 nginx_image_repo: nginx
 nginx_image_repo: reg.lifesense.com/library/nginx
+busybox reg.lifesense.com/library/busybox
+```
+
+`roles\kubernetes\node\defaults\main.yml`
+
+```
+library/nginx reg.lifesense.com/library/nginx
+```
+
+`roles\kubernetes-apps\ansible\defaults\main.yml`
+
+```
+gcr.io reg.lifesense.com
+```
+
+`roles\dnsmasq\templates\dnsmasq-autoscaler.yml.j2`
+
+```
+gcr.io reg.lifesense.com
+```
+
+
+
+```
+wget https://kubernetes-helm.storage.googleapis.com/helm-v2.6.2-linux-amd64.tar.gz
+mv helm /usr/local/bin/helm
 ```
 
 ```
+helm repo add incubator 
+https://kubernetes-charts-incubator.storage.googleapis.com/
 
-```
-
-
-
-
-
-
-
-
-
-
-
-charts源
-
-\`\`\`
-
-helm repo add incubator [https://kubernetes-charts-incubator.storage.googleapis.com/](https://kubernetes-charts-incubator.storage.googleapis.com/)
-
-helm repo add lifesense [https://caiwenhao.github.io/charts/](https://caiwenhao.github.io/charts/)
+helm repo add lifesense 
+https://caiwenhao.github.io/charts/
 
 helm repo update
+```
 
-\`\`\`
+
 
