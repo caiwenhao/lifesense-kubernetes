@@ -158,8 +158,6 @@ gcr.io reg.lifesense.com
 gcr.io reg.lifesense.com
 ```
 
-
-
 ```
 wget https://kubernetes-helm.storage.googleapis.com/helm-v2.6.2-linux-amd64.tar.gz
 mv helm /usr/local/bin/helm
