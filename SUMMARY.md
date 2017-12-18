@@ -12,6 +12,7 @@
   * [helm](helm.md)
   * ingress
   * dashboard
+  * heapster
   * efk
   * istio
 * [集群运维](ji-qun-yun-wei.md)
@@ -20,9 +21,8 @@
   * 添加第三方仓库
 * 分布式存储
   * ceph
-  * root
+  * rook
 * 集群监控
-  * heapster
   * Prometheus
 * 集群日志
   * [elk](elk.md)
