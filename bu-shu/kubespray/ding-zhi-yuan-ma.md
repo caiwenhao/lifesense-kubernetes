@@ -32,7 +32,7 @@
    ```
    git checkout lifesense-1.9
    git merge master
-   git push
+   git push origin lifesense-1.9
    ```
 
 > 这里推荐使用vs code 编程神器  [https://code.visualstudio.com/](https://code.visualstudio.com/)
