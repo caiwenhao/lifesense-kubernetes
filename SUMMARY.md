@@ -11,7 +11,7 @@
 * [核心组件](ji-qun-guan-li.md)
   * [helm](helm.md)
   * ingress
-  * dashboard
+  * [dashboard](dashboard.md)
   * heapster
   * efk
   * istio
@@ -26,6 +26,4 @@
   * Prometheus
 * 集群日志
   * [elk](elk.md)
-
-
 
