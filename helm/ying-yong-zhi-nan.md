@@ -6,9 +6,13 @@
 >
 > [https://github.com/caiwenhao/zipkin-helm](https://github.com/caiwenhao/zipkin-helm)
 
+```
+helm repo add incubator 
+https://kubernetes-charts-incubator.storage.googleapis.com/
+
+```
 
 
-helm repo add incubator [https://kubernetes-charts-incubator.storage.googleapis.com/](https://kubernetes-charts-incubator.storage.googleapis.com/)
 
 \`\`\`
 
