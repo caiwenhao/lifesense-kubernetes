@@ -9,7 +9,7 @@ dashboard_enabled: true
 ```
 
 ```
-
+ansible-playbook -i inventory/inventory.cfg cluster.yml -vs -u lifesense -t dashboard -k
 ```
 
 > helm初始化出现错误, 需要多次执行

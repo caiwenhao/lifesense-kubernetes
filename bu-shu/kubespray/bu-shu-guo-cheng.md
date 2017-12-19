@@ -41,5 +41,11 @@ docker push reg.lifesense.com/coreos/hyperkube:v1.8.4_coreos.0
 ansible-playbook -i inventory/inventory.cfg cluster.yml -vs -u lifesense -k
 ```
 
+### 部署单个组件
+
+```
+ansible-playbook -i inventory/inventory.cfg cluster.yml -vs -u lifesense --list-tags
+```
+
 
 

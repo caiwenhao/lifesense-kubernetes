@@ -10,15 +10,15 @@
   * [kubeadm](bu-shu/kubeadm.md)
 * [核心组件](ji-qun-guan-li.md)
   * [helm](helm.md)
-  * ingress
+  * [ingress](ingress.md)
   * [dashboard](dashboard.md)
-  * heapster
+  * [heapster](heapster.md)
   * efk
   * istio
 * [集群运维](ji-qun-yun-wei.md)
   * [kubectl](kubectl.md)
 * [镜像仓库](jing-xiang-cang-ku.md)
-  * 添加第三方仓库
+  * [添加第三方仓库](jing-xiang-cang-ku/tian-jia-di-san-fang-cang-ku.md)
 * 分布式存储
   * ceph
   * rook
