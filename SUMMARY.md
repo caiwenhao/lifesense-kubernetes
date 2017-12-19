@@ -13,8 +13,8 @@
   * [ingress](ingress.md)
   * [dashboard](dashboard.md)
   * [heapster](heapster.md)
-  * efk
-  * istio
+  * [efk](efk.md)
+  * [istio](istio.md)
 * [集群运维](ji-qun-yun-wei.md)
   * [kubectl](kubectl.md)
 * [镜像仓库](jing-xiang-cang-ku.md)

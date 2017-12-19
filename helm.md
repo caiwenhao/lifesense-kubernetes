@@ -33,13 +33,18 @@ wget https://kubernetes-helm.storage.googleapis.com/helm-v2.7.2-linux-amd64.tar.
 mv helm /usr/local/bin/helm
 ```
 
+### 添加仓库
+
 ```
-helm repo add incubator 
-https://kubernetes-charts-incubator.storage.googleapis.com/
+helm repo list
+NAME    URL                                             
+stable  https://kubernetes-charts.storage.googleapis.com
+local   http://127.0.0.1:8879/charts
+```
 
-helm repo add lifesense 
-https://caiwenhao.github.io/charts/
-
+```
+helm repo add incubator https://kubernetes-charts-incubator.storage.googleapis.com/
+helm repo add lifesense https://caiwenhao.github.io/chart
 helm repo update
 ```
 
