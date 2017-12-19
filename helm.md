@@ -1,5 +1,9 @@
 # helm
 
+> helm为基于k8s的打包软件,类似yum安装rpm包. 规避了
+>
+> 依赖大量yaml脚本的管理方式
+
 ## 部署
 
 `inventory\group_vars\k8s-cluster.yml`
