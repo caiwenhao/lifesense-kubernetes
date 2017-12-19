@@ -11,7 +11,7 @@
 * [核心组件](ji-qun-guan-li.md)
   * [helm](helm.md)
     * [helm指南](helm/ying-yong-zhi-nan.md)
-    * chart指南
+    * [chart指南](helm/chartzhi-nan.md)
   * [ingress](ingress.md)
   * [dashboard](dashboard.md)
   * [heapster](heapster.md)
@@ -28,6 +28,4 @@
   * Prometheus
 * 集群日志
   * [elk](elk.md)
-
-
 
