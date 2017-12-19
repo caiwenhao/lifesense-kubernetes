@@ -6,9 +6,21 @@
 >
 > [https://github.com/caiwenhao/zipkin-helm](https://github.com/caiwenhao/zipkin-helm)
 
-```
-helm repo add incubator 
-https://kubernetes-charts-incubator.storage.googleapis.com/
+## 基于github构建私有helm repo
+
+> 在github上配置GitHub Pages  只允许docs目录
+>
+> 私有仓库 https://github.com/caiwenhao/charts.git
+
+```bash
+#切换到仓库根目录,生成包
+helm package -d docs/ lifesense/*
+
+#生成index
+helm repo index docs --url https://caiwenhao.github.io/charts/
+
+#提交github
+git add * && git commit -m 'rebuild pages' --allow-empty && git push
 ```
 
 ## 项目常用命令
@@ -28,21 +40,6 @@ helm  upgrade  disconf .
 helm install --dry-run --debug
 #已安装模板
 helm get manifest
-```
-
-## 基于github构建私有helm repo
-
-> 在github上配置GitHub Pages  只允许docs目录
-
-```bash
-#切换到仓库根目录,生成包
-helm package -d docs/ lifesense/*
-
-#生成index
-helm repo index docs --url https://caiwenhao.github.io/charts/
-
-#提交github
-git add * && git commit -m 'rebuild pages' --allow-empty && git push
 ```
 
 ## 使用私有helm repo
