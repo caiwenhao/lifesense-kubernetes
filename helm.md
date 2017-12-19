@@ -9,13 +9,19 @@ dashboard_enabled: true
 ```
 
 ```
-ansible-playbook -i inventory/inventory.cfg cluster.yml -vs -u lifesense -t dashboard -k
+ansible-playbook -i inventory/inventory.cfg cluster.yml -vs -u lifesense -t helm -k
 ```
 
 > helm初始化出现错误, 需要多次执行
 
 ```
 /usr/local/bin/helm init --upgrade --tiller-image=reg.lifesense.com/kubernetes-helm/tiller:v2.7.2 --tiller-namespace=kube-system --service-account=tiller
+```
+
+### 解决容器化部署无法读取本地的问题
+
+```
+
 ```
 
 

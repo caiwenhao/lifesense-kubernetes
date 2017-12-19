@@ -152,20 +152,7 @@ gcr.io reg.lifesense.com
 gcr.io reg.lifesense.com
 ```
 
-```
-wget https://kubernetes-helm.storage.googleapis.com/helm-v2.6.2-linux-amd64.tar.gz
-mv helm /usr/local/bin/helm
-```
 
-```
-helm repo add incubator 
-https://kubernetes-charts-incubator.storage.googleapis.com/
-
-helm repo add lifesense 
-https://caiwenhao.github.io/charts/
-
-helm repo update
-```
 
 
 
