@@ -10,7 +10,7 @@
   * [kubeadm](bu-shu/kubeadm.md)
 * [核心组件](ji-qun-guan-li.md)
   * [helm](helm.md)
-    * 应用指南
+    * [应用指南](helm/ying-yong-zhi-nan.md)
   * [ingress](ingress.md)
   * [dashboard](dashboard.md)
   * [heapster](heapster.md)
@@ -27,6 +27,4 @@
   * Prometheus
 * 集群日志
   * [elk](elk.md)
-
-
 
