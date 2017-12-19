@@ -44,7 +44,7 @@ local   http://127.0.0.1:8879/charts
 
 ```
 helm repo add incubator https://kubernetes-charts-incubator.storage.googleapis.com/
-helm repo add lifesense https://caiwenhao.github.io/chart
+helm repo add lifesense https://caiwenhao.github.io/charts/
 helm repo update
 ```
 
