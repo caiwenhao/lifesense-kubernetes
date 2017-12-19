@@ -10,7 +10,7 @@
 
 > 在github上配置GitHub Pages  只允许docs目录
 >
-> 私有仓库 https://github.com/caiwenhao/charts.git
+> 私有仓库 [https://github.com/caiwenhao/charts.git](https://github.com/caiwenhao/charts.git)\`
 
 ```bash
 #切换到仓库根目录,生成包
