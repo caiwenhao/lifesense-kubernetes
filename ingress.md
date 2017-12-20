@@ -11,14 +11,13 @@ nginx配置
 
 ## helm方式部署
 
-> https://github.com/caiwenhao/charts/tree/master/stable/nginx-ingress
+> [https://github.com/caiwenhao/charts/tree/master/stable/nginx-ingress](https://github.com/caiwenhao/charts/tree/master/stable/nginx-ingress)
 >
 > 参照官方的chart, 默认不是hostNetwork 所以创建了独立的版本
 
 ```
 git clone https://github.com/caiwenhao/charts.git
 cd charts/lifesense/
-
 ```
 
 ### 支持nginx模板
@@ -28,7 +27,6 @@ cd charts/lifesense/
 ```
 kubectl cp kube-system/nginx-ingress-lb-cn5v1:/etc/nginx/nginx.conf /tmp/nginx.conf
 kubectl create configmap nginx-template --from-file=./nginx.tmpl -n kube-system
-
 ```
 
 ```
@@ -46,7 +44,6 @@ kubectl create configmap nginx-template --from-file=./nginx.tmpl -n kube-system
           items:
           - key: nginx.tmpl
             path: nginx.tmpl
-
 ```
 
 ### 修改暴露端口
@@ -59,7 +56,6 @@ kubectl create configmap nginx-template --from-file=./nginx.tmpl -n kube-system
           hostPort: 79
         - containerPort: 442
           hostPort: 442
-
 ```
 
 ### 支持tcp与udp负载均衡
@@ -72,8 +68,7 @@ kubectl create configmap nginx-template --from-file=./nginx.tmpl -n kube-system
         - containerPort: 65001
           hostPort: 65001
         - containerPort: 65002
-          hostPort: 65002 
-
+          hostPort: 65002
 ```
 
 ```
@@ -81,7 +76,6 @@ kubectl create configmap nginx-template --from-file=./nginx.tmpl -n kube-system
         - /nginx-ingress-controller
         - --default-backend-service=$(POD_NAMESPACE)/default-http-backend
         - --tcp-services-configmap=$(POD_NAMESPACE)/nginx-tcp-ingress-configmap
-
 ```
 
 ```
@@ -93,7 +87,6 @@ metadata:
 data:
   65002: "lifesense-qa/socket-svc:8080"
   65001: "lifesense-qa2/socket-svc:8080"
-
 ```
 
 ## 创建ingress

@@ -52,5 +52,12 @@ helm repo add lifesense https://caiwenhao.github.io/charts/
 helm repo update
 ```
 
+安装命令补全
+
+```
+helm completion bash >/etc/bash_completion.d/helm.sh
+source /usr/share/bash-completion/bash_completion
+```
+
 
 
