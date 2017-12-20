@@ -15,50 +15,77 @@ nginx配置
 >
 > 参照官方的chart, 默认不是hostNetwork 所以创建了独立的版本
 
-```
+```bash
 git clone https://github.com/caiwenhao/charts.git
 cd charts/lifesense/
+helm install nginx-ingress --namespace=kube-system
 ```
 
-### 支持nginx模板
+## 创建ingress
 
-> 通过kubectl cp 命令从容器中拷贝nginx.tmpl
-
-```
-kubectl cp kube-system/nginx-ingress-lb-cn5v1:/etc/nginx/nginx.conf /tmp/nginx.conf
-kubectl create configmap nginx-template --from-file=./nginx.tmpl -n kube-system
-```
+> ingress是区分namespace的
 
 ```
-        volumeMounts:
-          - mountPath: /etc/nginx/template
-            name: nginx-template-volume
-            readOnly: true                
-        args:
-        - /nginx-ingress-controller
-        - --default-backend-service=$(POD_NAMESPACE)/default-http-backend
-      volumes:
-      - name: nginx-template-volume
-        configMap:
-          name: nginx-template
-          items:
-          - key: nginx.tmpl
-            path: nginx.tmpl
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: k8s-kibana.lifesense.com
+  namespace: kube-system  
+spec:
+  rules:
+  - host: k8s-kibana.lifesense.com
+    http:
+      paths:
+      - backend:
+          serviceName: kubernetes-dashboard
+          servicePort: 9090
 ```
 
-### 修改暴露端口
-
-> 考虑到接入api网关与支持http2的需求
+> 微服务实例
 
 ```
-        ports:
-        - containerPort: 80
-          hostPort: 79
-        - containerPort: 442
-          hostPort: 442
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: sports-qa.lifesense.com
+  namespace: lifesense-qa
+  annotations:
+    ingress.kubernetes.io/rewrite-target: /
+    ingress.kubernetes.io/force-ssl-redirect: "false"
+    ingress.kubernetes.io/ssl-redirect: "false"    
+    ingress.kubernetes.io/proxy-body-size: 2m
+spec:
+  tls:
+  - hosts:
+    - sports-qa.lifesense.com
+    secretName: lifesense
+  rules:
+  - host: sports-qa.lifesense.com
+    http:
+      paths: 
+      - path: /sms
+        backend:
+          serviceName: sms-svc
+          servicePort: 8080    
 ```
 
-### 支持tcp与udp负载均衡
+> 证书支持
+>
+> 生产环境我们一般会把证书放到负债均衡器. 后端只是使用80
+
+```
+  apiVersion: v1
+  kind: Secret
+  metadata:
+    name: example-tls
+    namespace: foo
+  data:
+    tls.crt: <base64 encoded cert>
+    tls.key: <base64 encoded key>
+  type: kubernetes.io/tls
+```
+
+## 支持tcp与udp负载均衡
 
 > [https://github.com/kubernetes/ingress/tree/master/examples/tcp/nginx](https://github.com/kubernetes/ingress/tree/master/examples/tcp/nginx)
 
@@ -87,26 +114,6 @@ metadata:
 data:
   65002: "lifesense-qa/socket-svc:8080"
   65001: "lifesense-qa2/socket-svc:8080"
-```
-
-## 创建ingress
-
-> ingress是区分namespace的
-
-```
-apiVersion: extensions/v1beta1
-kind: Ingress
-metadata:
-  name: k8s-kibana.lifesense.com
-  namespace: kube-system  
-spec:
-  rules:
-  - host: k8s-kibana.lifesense.com
-    http:
-      paths:
-      - backend:
-          serviceName: kubernetes-dashboard
-          servicePort: 9090
 ```
 
 
