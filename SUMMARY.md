@@ -13,8 +13,8 @@
     * [helm指南](helm/ying-yong-zhi-nan.md)
     * [chart指南](helm/chartzhi-nan.md)
   * [ingress](ingress.md)
-    * 支持列表
-    * 配置定制
+    * [支持列表](ingress/zhi-chi-lie-biao.md)
+    * [配置定制](ingress/pei-zhi-ding-zhi.md)
   * [dashboard](dashboard.md)
   * [heapster](heapster.md)
   * [efk](efk.md)
@@ -30,6 +30,4 @@
   * Prometheus
 * 集群日志
   * [elk](elk.md)
-
-
 
