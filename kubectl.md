@@ -4,18 +4,18 @@
 
 ```bash
 mkdir kubectl
-ssh -i ~/.ssh/id_rsa_sbexx core@master1_ip sudo cat /etc/kubernetes/ssl/admin-node1.pem > kubectl/admin-node1.pem
-ssh -i ~/.ssh/id_rsa_sbexx core@master1_ip sudo cat /etc/kubernetes/ssl/admin-node1-key.pem > kubectl/admin-node1-key.pem
-ssh -i ~/.ssh/id_rsa_sbexx core@master1_ip sudo cat /etc/kubernetes/ssl/ca.pem > kubectl/ca.pem
+ssh -i ~/.ssh/id_rsa_sbexx core@master1_ip sudo cat /etc/kubernetes/ssl/admin-node1.pem > /tmp/master/admin-master1.pem
+ssh -i ~/.ssh/id_rsa_sbexx core@master1_ip sudo cat /etc/kubernetes/ssl/admin-node1-key.pem > /tmp/master/admin-master1-key.pem
+ssh -i ~/.ssh/id_rsa_sbexx core@master1_ip sudo cat /etc/kubernetes/ssl/ca.pem > /tmp/master/ca.pem
 ```
 
 ```bash
-kubectl config set-cluster kargo --server=https://master1_ip:8443 --certificate-authority=kubectl/ca.pem
+kubectl config set-cluster kargo --server=https://10.9.94.239:6443 --certificate-authority=/tmp/master/ca.pem  
 
 kubectl config set-credentials kadmin \
-    --certificate-authority=kubectl/ca.pem \
-    --client-key=kubectl/admin-node1-key.pem \
-    --client-certificate=kubectl/admin-node1.pem  
+--certificate-authority=/tmp/master/ca.pem \
+--client-key=/tmp/master/admin-master1-key.pem \
+--client-certificate=/tmp/master/admin-master1.pem
 
 kubectl config set-context kargo --cluster=kargo --user=kadmin
 kubectl config use-context kargo
@@ -26,6 +26,7 @@ kubectl get all --all-namespaces
 ```
 
 ```bash
+kubectl completion bash >/etc/bash_completion.d/kubectl.sh
 source <(kubectl completion bash)
 kubectl get nod +[TAB]
 ```

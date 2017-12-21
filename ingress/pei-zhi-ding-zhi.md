@@ -7,7 +7,6 @@
 ```
   annotations:
     ingress.kubernetes.io/rewrite-target: /
-
 ```
 
 ### 支持https与http2
@@ -19,8 +18,7 @@
 ```
   annotations:
     ingress.kubernetes.io/force-ssl-redirect: "false"
-    ingress.kubernetes.io/ssl-redirect: "false"  
-
+    ingress.kubernetes.io/ssl-redirect: "false"
 ```
 
 **创建证书secret**
@@ -29,7 +27,6 @@
 
 ```
 kubectl create secret tls lifesense --key _.lifesense.com.key --cert _.lifesense.com.crt -n system-kube
-
 ```
 
 ```
@@ -38,7 +35,6 @@ spec:
   - hosts:
     - {{item}}
     secretName: lifesense
-
 ```
 
 ### 支持tcp转发
