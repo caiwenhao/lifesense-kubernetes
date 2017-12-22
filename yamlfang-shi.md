@@ -204,9 +204,7 @@ curl --silent -H "Host: sports-qa.lifesense.com" "106.75.16.142/user_service/ech
 
 > 以上为用户服务的完整例子, 依此类推添加上其他微服务.
 
-
-
-## 特殊服务处理
+## 特殊协议
 
 ### websocket
 
@@ -224,7 +222,7 @@ spec:
       - path: /websocket
         backend:
           serviceName: websocket-svc
-          servicePort: 8080  
+          servicePort: 8080
 ```
 
 ### socket
