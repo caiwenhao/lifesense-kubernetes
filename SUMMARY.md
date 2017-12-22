@@ -32,5 +32,5 @@
   * [elk](elk.md)
 * 业务部署
   * [yaml方式](yamlfang-shi.md)
-  * helm方式
+  * [helm方式](helmfang-shi.md)
 

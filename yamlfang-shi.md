@@ -238,5 +238,48 @@ data:
   65001: "lifesense-qa2/socket-svc:8080"
 ```
 
+## 静态资源
+
+```
+apiVersion: v1
+kind: Endpoints
+metadata:
+  name: static-qa
+subsets:
+  - addresses:
+    - ip: 10.9.84.193
+    ports:
+      - port: 80
+```
+
+```
+apiVersion: v1
+kind: Service
+metadata:
+  name: static-qa
+spec:
+  ports:
+    - port: 80
+```
+
+```
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: static-qa.lifesense.com
+  namespace: lifesense-qa
+  annotations:
+    ingress.kubernetes.io/app-root: static-qa.lifesense.com
+spec:
+  rules:
+  - host: static-qa.lifesense.com
+    http:
+      paths: 
+      - path: /
+        backend:
+          serviceName: static-qa
+          servicePort: 80
+```
+
 
 
