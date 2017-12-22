@@ -202,5 +202,11 @@ curl --silent -H "Host: sports-qa.lifesense.com" "10.9.94.239/user_service/echo?
 curl --silent -H "Host: sports-qa.lifesense.com" "106.75.16.142/user_service/echo?requestId=88"
 ```
 
+> 以上为用户服务的完整例子, 依此类推添加上其他微服务.
+
+
+
+
+
 
 
