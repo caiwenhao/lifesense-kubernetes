@@ -22,7 +22,7 @@
 * [集群运维](ji-qun-yun-wei.md)
   * [kubectl](kubectl.md)
 * [镜像仓库](jing-xiang-cang-ku.md)
-  * [添加第三方仓库](jing-xiang-cang-ku/tian-jia-di-san-fang-cang-ku.md)
+  * [添加私有仓库](jing-xiang-cang-ku/tian-jia-di-san-fang-cang-ku.md)
 * 分布式存储
   * ceph
   * rook
