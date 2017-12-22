@@ -281,5 +281,9 @@ spec:
           servicePort: 80
 ```
 
+```
+curl --silent -H "Host: static-qa.lifesense.com" "10.9.94.239/zepto.min.js"
+```
+
 
 
