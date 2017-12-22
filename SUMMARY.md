@@ -31,8 +31,6 @@
 * 集群日志
   * [elk](elk.md)
 * 业务部署
-  * yaml方式
+  * [yaml方式](yamlfang-shi.md)
   * helm方式
-
-
 
