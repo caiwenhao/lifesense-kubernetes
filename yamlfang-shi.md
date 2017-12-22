@@ -197,8 +197,11 @@ spec:
 
 ![](/assets/1.png)测试
 
-```
- curl --silent -H "Host: sports-qa.lifesense.com" "10.9.94.239/user_service/echo?requestId=88"
+```bash
+#内网测试
+curl --silent -H "Host: sports-qa.lifesense.com" "10.9.94.239/user_service/echo?requestId=88"
+#外网测试
+curl --silent -H "Host: sports-qa.lifesense.com" "106.75.16.142/user_service/echo?requestId=88"
 ```
 
 
