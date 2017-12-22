@@ -61,6 +61,12 @@ docker_options: "--registry-mirror=http://b377ad59.m.daocloud.io --insecure-regi
 > 1. 修改docker存储路径
 > 2. 启动镜像国内加速  --registry-mirror=[http://b377ad59.m.daocloud.io](http://b377ad59.m.daocloud.io)
 
+```
+--insecure-registry=10.10.185.222
+```
+
+> 添加私有仓库
+
 ### 4.修改kube全局参数
 
 `inventory\group_vars\k8s-cluster.yml`
@@ -151,8 +157,6 @@ gcr.io reg.lifesense.com
 ```
 gcr.io reg.lifesense.com
 ```
-
-
 
 
 
