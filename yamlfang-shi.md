@@ -145,7 +145,7 @@ spec:
 kubectl delete ./ -n lifesense-qa
 ```
 
-创建svc 
+创建svc
 
 ```
 apiVersion: v1
@@ -188,12 +188,18 @@ spec:
       - path: /user_service
         backend:
           serviceName: user-svc
-          servicePort: 8080   
+          servicePort: 8080
 ```
 
 ## 负载均衡器
 
 > 公有云的流量入口, 80 443 默认绑定所有节点的ingress端口
 
-![](/assets/1.png)
+![](/assets/1.png)测试
+
+```
+ curl --silent -H "Host: sports-qa.lifesense.com" "10.9.94.239/user_service/echo?requestId=88"
+```
+
+
 
