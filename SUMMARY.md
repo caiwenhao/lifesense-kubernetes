@@ -30,4 +30,9 @@
   * Prometheus
 * 集群日志
   * [elk](elk.md)
+* 业务部署
+  * yaml方式
+  * helm方式
+
+
 
