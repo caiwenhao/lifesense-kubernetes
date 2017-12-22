@@ -11,6 +11,10 @@ do
 done
 ```
 
+## 微服务配置
+
+> 这里以用户服务为例子
+
 ```
 apiVersion: apps/v1beta1
 kind: Deployment
@@ -139,13 +143,7 @@ spec:
           protocol: TCP
 ```
 
-> 微服务迁移,生成最新的配置,部署微服务
-
-```
-kubectl delete ./ -n lifesense-qa
-```
-
-创建svc
+### 创建svc
 
 ```
 apiVersion: v1
@@ -163,7 +161,7 @@ spec:
       targetPort: 8080
 ```
 
-创建ingress
+### 创建ingress
 
 ```
 apiVersion: extensions/v1beta1
@@ -191,7 +189,7 @@ spec:
           servicePort: 8080
 ```
 
-## 负载均衡器
+### 负载均衡器
 
 > 公有云的流量入口, 80 443 默认绑定所有节点的ingress端口
 
