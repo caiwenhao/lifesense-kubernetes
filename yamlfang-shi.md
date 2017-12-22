@@ -206,7 +206,39 @@ curl --silent -H "Host: sports-qa.lifesense.com" "106.75.16.142/user_service/ech
 
 
 
+## 特殊服务处理
 
+### websocket
+
+```
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: websocket-qa.lifesense.com
+  namespace: lifesense-qa  
+spec:
+  rules:
+  - host: websocket-qa.lifesense.com
+    http:
+      paths: 
+      - path: /websocket
+        backend:
+          serviceName: websocket-svc
+          servicePort: 8080  
+```
+
+### socket
+
+```
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: nginx-tcp-ingress-configmap
+  namespace: kube-system
+data:
+  65002: "lifesense-qa/socket-svc:8080"
+  65001: "lifesense-qa2/socket-svc:8080"
+```
 
 
 
