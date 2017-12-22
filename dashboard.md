@@ -13,7 +13,19 @@ ansible-playbook -i inventory/inventory.cfg cluster.yml -vs -u lifesense -t dash
 **配置访问入口**
 
 ```
-
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: k8s-kibana.lifesense.com
+  namespace: kube-system  
+spec:
+  rules:
+  - host: k8s-kibana.lifesense.com
+    http:
+      paths:
+      - backend:
+          serviceName: kubernetes-dashboard
+          servicePort: 9090
 ```
 
 

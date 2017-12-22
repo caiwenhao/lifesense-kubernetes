@@ -24,9 +24,9 @@
 * [镜像仓库](jing-xiang-cang-ku.md)
   * [添加私有仓库](jing-xiang-cang-ku/tian-jia-di-san-fang-cang-ku.md)
 * 分布式存储
-  * ceph
-  * rook
-* 集群监控
+  * [ceph](ceph.md)
+  * [rook](rook.md)
+* [集群监控](ji-qun-jian-kong.md)
   * Prometheus
 * 集群日志
   * [elk](elk.md)
