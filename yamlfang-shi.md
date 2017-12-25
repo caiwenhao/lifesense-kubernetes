@@ -1,5 +1,45 @@
 # yaml方式
 
+```
+kubectl create namespace lifesense-qa2
+```
+
+```
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: env-config
+  namespace: lifesense-qa2  
+data:
+  DISCONF_ENV: "lifesense-qa2"
+  TingYun: "false"
+  OPTS: "-Dlog.level=debug"
+  lifesense_gray: ""
+  lifesense_dubbo_version: ""
+```
+
+```
+apiVersion: v1
+kind: LimitRange
+metadata:
+  name: lifesenselimits
+spec:
+  limits:
+  - default:
+      cpu: 500m
+      memory: 640Mi
+    defaultRequest:
+      cpu: 160m
+      memory: 500Mi
+    max:
+      cpu: "1"
+      memory: 1Gi
+    min:
+      cpu: 100m
+      memory: 50Mi
+    type: Container
+```
+
 > 早期的部署方式采用大量的yaml脚本
 
 ```bash
