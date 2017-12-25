@@ -30,7 +30,7 @@
   * Prometheus
 * 集群日志
   * [elk](elk.md)
-* 业务部署
+* [业务部署](ye-wu-bu-shu.md)
   * [yaml方式](yamlfang-shi.md)
   * [helm方式](helmfang-shi.md)
 
