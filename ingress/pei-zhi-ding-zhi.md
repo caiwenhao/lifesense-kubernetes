@@ -41,5 +41,11 @@ spec:
 
 > 详见 ingree部署环节
 
+```
+tcp:
+  65001: "lifesense-qa/socket-svc:8080"
+  65002: "lifesense-qa2/socket-svc:8080"
+```
+
 
 
