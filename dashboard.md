@@ -1,5 +1,9 @@
 # dashboard
 
+## 部署方式一
+
+> 不建议采用
+
 `inventory\group_vars\k8s-cluster.yml`
 
 ```
@@ -27,6 +31,19 @@ spec:
           serviceName: kubernetes-dashboard
           servicePort: 9090
 ```
+
+## helm方式部署
+
+```bash
+#生成证书
+kubectl create secret tls lifesense --key _.lifesense.com.key --cert _.lifesense.com.crt -n kube-system 
+```
+
+```
+helm install stable/kubernetes-dashboard/ --namespace=kube-system
+```
+
+> 访问 https://kubernetes-dashboard.lifesense.com
 
 
 
