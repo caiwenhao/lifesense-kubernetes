@@ -90,37 +90,31 @@ spec:
 >
 > 当前稳定版本为 v0.5.1
 
+```bash
+#部署rook-tools
+kubectl apply -f deploy/rook-tools.yaml -n rook
+```
 
+### 支持rbd挂载
 
-\*\*支持rbd挂载\*\*
+```
+kubectl apply -f deploy/rook-storageclass.yaml -n rook
+kubectl get storageclass rook-block 
+NAME         PROVISIONER
+rook-block   rook.io/block
 
-\`\`\`shell
-
-kubectl apply -f deploy/rook-storageclass.yaml
-
-\#测试
-
+#测试
 kubectl apply -f deploy/test/wordpress.yaml
+```
 
-\`\`\`
+### 支持cephfs
 
-\*\*支持cephfs\*\*
-
-\`\`\`shell
-
-\#5.1版本
-
+```
 kubectl exec -ti rook-tools /bin/bash -n rook
-
 rookctl filesystem create --name cephfs
-
 ceph osd pool set cephfs-data size 2
-
 ceph osd pool set cephfs-metadata size 2
-
-\`\`\`
-
-\`\`\`shell
+```
 
 \#应用
 
@@ -173,8 +167,6 @@ sed
 \`\`\`
 
 \*\*\*\*
-
-
 
 ## 扩容
 
