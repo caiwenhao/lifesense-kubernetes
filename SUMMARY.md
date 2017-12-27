@@ -37,8 +37,8 @@
     * [yaml方式](yamlfang-shi.md)
     * [helm方式](helmfang-shi.md)
   * 业务设施
-    * zk
-  * * kafka
+    * [zk](ye-wu-bu-shu/zk.md)
+    * kafka
     * flume
     * disconf
 
