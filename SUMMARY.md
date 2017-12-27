@@ -37,8 +37,8 @@
     * [yaml方式](yamlfang-shi.md)
     * [helm方式](helmfang-shi.md)
   * 业务设施
-    * [z](ye-wu-bu-shu/zk.md)ookper
-    * kafka
+    * zookeeper
+  * * kafka
     * flume
     * disconf
 
