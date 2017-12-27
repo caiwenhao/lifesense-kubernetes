@@ -15,6 +15,7 @@
   * [ingress](ingress.md)
     * [支持列表](ingress/zhi-chi-lie-biao.md)
     * [配置定制](ingress/pei-zhi-ding-zhi.md)
+    * 访问验证
   * [heapster](heapster.md)
   * [dashboard](dashboard.md)
   * [efk](efk.md)
@@ -33,4 +34,6 @@
 * [业务部署](ye-wu-bu-shu.md)
   * [yaml方式](yamlfang-shi.md)
   * [helm方式](helmfang-shi.md)
+
+
 
