@@ -27,6 +27,7 @@
 * 分布式存储
   * [ceph](ceph.md)
   * [rook](rook.md)
+  * glusterfs
 * [集群监控](ji-qun-jian-kong.md)
   * [Prometheus](ji-qun-jian-kong/prometheus.md)
 * [集群日志](ji-qun-ri-zhi.md)
@@ -34,4 +35,6 @@
 * [业务部署](ye-wu-bu-shu.md)
   * [yaml方式](yamlfang-shi.md)
   * [helm方式](helmfang-shi.md)
+
+
 
