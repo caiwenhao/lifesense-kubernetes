@@ -33,6 +33,9 @@
 * [集群日志](ji-qun-ri-zhi.md)
   * [elk](elk.md)
 * [业务部署](ye-wu-bu-shu.md)
-  * [yaml方式](yamlfang-shi.md)
-  * [helm方式](helmfang-shi.md)
+  * 微服务
+    * [yaml方式](yamlfang-shi.md)
+    * [helm方式](helmfang-shi.md)
+
+
 
