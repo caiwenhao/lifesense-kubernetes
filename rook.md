@@ -133,6 +133,10 @@ kubectl get storageclass
 NAME         PROVISIONER
 cephfs       kubernetes.io/cephfs
 rook-block   rook.io/block
+
+#测试
+kubectl apply -f deploy/cephfs-pvc.yaml 
+kubectl apply -f deploy/cephfs-deploy.yaml 
 ```
 
 > 不同的namespace使用需要配置secret rook-admin
