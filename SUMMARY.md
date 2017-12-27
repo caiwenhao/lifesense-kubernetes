@@ -15,8 +15,8 @@
   * [ingress](ingress.md)
     * [支持列表](ingress/zhi-chi-lie-biao.md)
     * [配置定制](ingress/pei-zhi-ding-zhi.md)
-  * [dashboard](dashboard.md)
   * [heapster](heapster.md)
+  * [dashboard](dashboard.md)
   * [efk](efk.md)
   * [istio](istio.md)
 * [集群运维](ji-qun-yun-wei.md)
@@ -28,7 +28,7 @@
   * [rook](rook.md)
 * [集群监控](ji-qun-jian-kong.md)
   * Prometheus
-* 集群日志
+* [集群日志](ji-qun-ri-zhi.md)
   * [elk](elk.md)
 * [业务部署](ye-wu-bu-shu.md)
   * [yaml方式](yamlfang-shi.md)
