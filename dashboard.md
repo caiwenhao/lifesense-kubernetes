@@ -36,14 +36,14 @@ spec:
 
 ```bash
 #生成证书
-kubectl create secret tls lifesense --key _.lifesense.com.key --cert _.lifesense.com.crt -n kube-system 
+kubectl create secret tls lifesense --key _.lifesense.com.key --cert _.lifesense.com.crt -n kube-system
 ```
 
 ```
 helm install stable/kubernetes-dashboard/ --namespace=kube-system
 ```
 
-> 访问 https://kubernetes-dashboard.lifesense.com
+> 访问 [https://kubernetes-dashboard.lifesense.com](https://kubernetes-dashboard.lifesense.com)
 
 
 

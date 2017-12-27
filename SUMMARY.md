@@ -28,7 +28,7 @@
   * [ceph](ceph.md)
   * [rook](rook.md)
 * [集群监控](ji-qun-jian-kong.md)
-  * Prometheus
+  * [Prometheus](ji-qun-jian-kong/prometheus.md)
 * [集群日志](ji-qun-ri-zhi.md)
   * [elk](elk.md)
 * [业务部署](ye-wu-bu-shu.md)
