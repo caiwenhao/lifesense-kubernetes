@@ -116,57 +116,14 @@ ceph osd pool set cephfs-data size 2
 ceph osd pool set cephfs-metadata size 2
 ```
 
-\#应用
+**应用**
 
+```bash
 yum install jq
-
-kubectl get secret rook-admin -n rook -o json \| jq
-
-'.metadata.namespace = "default"'
-
-\| kubectl apply -f -
-
-export
-
-MONS=
-
-$\(kubectl -n rook get service -l app=rook-ceph-mon -o json
-
-\|
-
-jq ".items\[\].spec.clusterIP"
-
-\|
-
-tr -d "\""
-
-\|
-
-sed -e 's/$/:6790/'
-
-\|
-
-paste -s -d, -\)
-
-sed
-
-"s/INSERT\_MONS\_HERE/$MONS/g"
-
-./test/kube-registry.yaml \| kubectl create -f -
-
-\`\`\`
-
-4.
-
-对象存储
-
-\`\`\`shell
-
-\#未验证
-
-\`\`\`
-
-\*\*\*\*
+kubectl get secret rook-admin -n rook -o json | jq '.metadata.namespace = "default"' | kubectl apply -f -
+export MONS=$(kubectl -n rook get service -l app=rook-ceph-mon -o json|jq ".items[].spec.clusterIP"|tr -d "\""|sed -e 's/$/:6790/'|paste -s -d, -)
+sed "s/INSERT_MONS_HERE/$MONS/g" deploy/kube-registry.yaml | kubectl create -f -
+```
 
 ## 扩容
 
