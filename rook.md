@@ -29,8 +29,6 @@ vim /etc/fstab
 yum  install ceph-common-0.94.5-2.el7.x86_64
 ```
 
-## 
-
 ## 部署
 
 ```bash
@@ -52,7 +50,7 @@ metadata:
   namespace: rook
 spec:
   versionTag: v0.5.1
-  dataDirHostPath: /data/rook  
+  dataDirHostPath: /udisk/
   monCount: 3
   storage:
     useAllNodes: true
@@ -88,15 +86,10 @@ spec:
       tolerations:
 ```
 
-&gt;
+> 不可使用master版本, 由于master变更过于频繁,导致版本不一致,会产生比较多的问题
+>
+> 当前稳定版本为 v0.5.1
 
-不可使用master版本, 由于master变更过于频繁,导致版本不一致,会产生比较多的问题
-
-&gt;
-
-当前稳定版本为 v0.5.1
-
-  
 
 
 \*\*支持rbd挂载\*\*
@@ -111,13 +104,7 @@ kubectl apply -f deploy/test/wordpress.yaml
 
 \`\`\`
 
-  
-
-
 \*\*支持cephfs\*\*
-
-  
-
 
 \`\`\`shell
 
@@ -132,9 +119,6 @@ ceph osd pool set cephfs-data size 2
 ceph osd pool set cephfs-metadata size 2
 
 \`\`\`
-
-  
-
 
 \`\`\`shell
 
@@ -178,15 +162,9 @@ sed
 
 \`\`\`
 
-  
-
-
 4.
 
 对象存储
-
-  
-
 
 \`\`\`shell
 
@@ -194,8 +172,17 @@ sed
 
 \`\`\`
 
-  
-
-
 \*\*\*\*
+
+
+
+## 扩容
+
+```bash
+xfs_repair /dev/vdb
+mount -t xfs /dev/vdb /data
+xfs_growfs /data
+```
+
+
 
