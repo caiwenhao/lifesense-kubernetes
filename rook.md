@@ -129,6 +129,10 @@ sed "s/INSERT_MONS_HERE/$MONS/g" deploy/kube-registry.yaml | kubectl create -f -
 
 ```
 helm install ./cephfs-provisioner/ --namespace=rook
+kubectl get storageclass 
+NAME         PROVISIONER
+cephfs       kubernetes.io/cephfs
+rook-block   rook.io/block
 ```
 
 ## 扩容
