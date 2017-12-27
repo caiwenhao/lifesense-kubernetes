@@ -125,6 +125,12 @@ export MONS=$(kubectl -n rook get service -l app=rook-ceph-mon -o json|jq ".item
 sed "s/INSERT_MONS_HERE/$MONS/g" deploy/kube-registry.yaml | kubectl create -f -
 ```
 
+**支持storageclass**
+
+```
+helm install ./cephfs-provisioner/ --namespace=rook
+```
+
 ## 扩容
 
 ```bash

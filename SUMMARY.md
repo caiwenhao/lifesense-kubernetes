@@ -24,7 +24,7 @@
   * [kubectl](kubectl.md)
 * [镜像仓库](jing-xiang-cang-ku.md)
   * [添加私有仓库](jing-xiang-cang-ku/tian-jia-di-san-fang-cang-ku.md)
-* 分布式存储
+* [分布式存储](fen-bu-shi-cun-chu.md)
   * [ceph](ceph.md)
   * [rook](rook.md)
   * [glusterfs](glusterfs.md)
