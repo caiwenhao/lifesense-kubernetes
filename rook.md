@@ -135,6 +135,8 @@ cephfs       kubernetes.io/cephfs
 rook-block   rook.io/block
 ```
 
+> 不同的namespace使用需要配置secret rook-admin
+
 ## 扩容
 
 ```bash
