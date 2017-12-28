@@ -33,12 +33,9 @@
 * [集群日志](ji-qun-ri-zhi.md)
   * [elk](elk.md)
 * [业务部署](ye-wu-bu-shu.md)
-
   * [微服务](ye-wu-bu-shu/wei-fu-wu.md)
     * [yaml方式](yamlfang-shi.md)
     * [helm方式](helmfang-shi.md)
   * 业务设施
-    * zookeeper
-
-
+    * [zookeeper](ye-wu-bu-shu/zookeeper.md)
 
