@@ -1,7 +1,7 @@
 # 部署过程
 
-> 参考文档 https://github.com/kubernetes-incubator/kubespray/tree/master/docs
-
+> 参考文档 [https://github.com/kubernetes-incubator/kubespray/tree/master/docs](https://github.com/kubernetes-incubator/kubespray/tree/master/docs)
+>
 > 支持tag单步骤部署
 
 ```bash
@@ -60,7 +60,8 @@ ansible-playbook -i Inventory/k8s Initialize.yml -vs -l 10.9.120.127 -u root
 集群节点扩容
 
 ```
-
+ansible-playbook -i inventory/inventory.cfg  scale.yml -vs -u lifesense -k 
+yum  install ceph-common-0.94.5-2.el7.x86_64
 ```
 
 
