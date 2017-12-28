@@ -38,7 +38,5 @@
     * [helm方式](helmfang-shi.md)
   * 业务设施
     * [zookeeper](ye-wu-bu-shu/zookeeper.md)
-    * kafka
-
-
+    * [kafka](ye-wu-bu-shu/kafka.md)
 
