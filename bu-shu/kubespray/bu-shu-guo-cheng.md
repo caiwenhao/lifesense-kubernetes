@@ -1,5 +1,7 @@
 # 部署过程
 
+> 参考文档 https://github.com/kubernetes-incubator/kubespray/tree/master/docs
+
 > 支持tag单步骤部署
 
 ```bash
@@ -45,6 +47,20 @@ ansible-playbook -i inventory/inventory.cfg cluster.yml -vs -u lifesense -k
 
 ```
 ansible-playbook -i inventory/inventory.cfg cluster.yml -vs -u lifesense --list-tags
+```
+
+## 添加节点
+
+环境初始化
+
+```
+ansible-playbook -i Inventory/k8s Initialize.yml -vs -l 10.9.120.127 -u root
+```
+
+集群节点扩容
+
+```
+
 ```
 
 
