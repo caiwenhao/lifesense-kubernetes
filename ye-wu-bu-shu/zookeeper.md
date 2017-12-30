@@ -1,12 +1,12 @@
 # zookeeper
 
 ```
-helm install zookeeper/ --namespace=lifesense-qa
+ helm install lifesense/zookeeper/ --name=lifesense-qa2 --namespace=base
 ```
 
 > 集群内部访问地址:
 >
-> solitary-sabertooth-zookeeper-0.solitary-sabertooth-zookeeper-headless:2181
+> nslookup lifesense-qa2-zookeeper-0.lifesense-qa2-zookeeper-headless.base:2181
 
 
 
