@@ -18,7 +18,7 @@
     * [访问验证](ingress/fang-wen-yan-zheng.md)
   * [heapster](heapster.md)
   * [dashboard](dashboard.md)
-  * [efk](efk.md)
+
   * [istio](istio.md)
 * [集群运维](ji-qun-yun-wei.md)
   * [kubectl](kubectl.md)
@@ -39,4 +39,6 @@
   * 业务设施
     * [zookeeper](ye-wu-bu-shu/zookeeper.md)
     * [kafka](ye-wu-bu-shu/kafka.md)
+
+
 
