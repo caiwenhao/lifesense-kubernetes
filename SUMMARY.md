@@ -23,7 +23,9 @@
   * [istio](istio.md)
 
 * [集群运维](ji-qun-yun-wei.md)
+
   * [kubectl](kubectl.md)
+
 * [镜像仓库](jing-xiang-cang-ku.md)
   * [添加私有仓库](jing-xiang-cang-ku/tian-jia-di-san-fang-cang-ku.md)
 * [分布式存储](fen-bu-shi-cun-chu.md)
@@ -33,7 +35,8 @@
 * [集群监控](ji-qun-jian-kong.md)
   * [Prometheus](ji-qun-jian-kong/prometheus.md)
 * [集群日志](ji-qun-ri-zhi.md)
-  * [elk](elk.md)
+  * Elasticsearch
+* * [elk](elk.md)
 * [业务部署](ye-wu-bu-shu.md)
   * [微服务](ye-wu-bu-shu/wei-fu-wu.md)
     * [yaml方式](yamlfang-shi.md)
