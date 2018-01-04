@@ -30,8 +30,7 @@
 * [集群监控](ji-qun-jian-kong.md)
   * [Prometheus](ji-qun-jian-kong/prometheus.md)
 * [集群日志](ji-qun-ri-zhi.md)
-  * 组件日志
-* * [Elasticsearch](ji-qun-ri-zhi/elasticsearch.md)
+  * [组件日志](ji-qun-ri-zhi/zu-jian-ri-zhi.md)
 * [业务部署](ye-wu-bu-shu.md)
   * [微服务](ye-wu-bu-shu/wei-fu-wu.md)
     * [yaml方式](yamlfang-shi.md)
@@ -39,6 +38,4 @@
   * 业务设施
     * [zookeeper](ye-wu-bu-shu/zookeeper.md)
     * [kafka](ye-wu-bu-shu/kafka.md)
-
-
 
